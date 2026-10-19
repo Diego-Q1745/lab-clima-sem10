@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172b4d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 36px 18px;
+  background: linear-gradient(
+    180deg,
+    #7fd3f7 0%,
+    #4fb6ea 38%,
+    #1f8fd1 72%,
+    #0c6fb3 100%
+  );
+}
+
+.contenedor {
+  width: min(100%, 820px);
+  margin: 0 auto;
+}
+
+.encabezado {
+  text-align: center;
+  margin: 14px 0 28px;
+}
+
+.etiqueta {
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.encabezado p:last-child {
+  color: #eaf7ff;
+  line-height: 1.6;
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+.panel,
+.tarjeta-clima {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #cfe7f6;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(8, 74, 117, 0.18);
+  padding: 24px;
+}
+
+.buscador {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 9px;
+}
+
+label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1b5c84;
+}
+
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 13px;
+  border: 1px solid #b8d8eb;
+  border-radius: 10px;
+  background: #f8fcff;
+  color: #204d68;
+  font: inherit;
+}
+
+select:focus,
+button:focus-visible {
+  outline: 3px solid #9fd7f5;
+  outline-offset: 2px;
+}
+
+button {
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 10px;
+  background: #0f88cf;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #0a72b0;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.error {
+  display: none;
+  margin: 14px 4px 0;
+  color: #d62828;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.resultado {
+  margin-top: 20px;
+}
+
+.estado-inicial,
+.estado-carga {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px dashed #b7daee;
+  border-radius: 18px;
+  padding: 38px 22px;
+  text-align: center;
+  color: #547489;
+}
+
+.icono {
+  display: inline-block;
+  color: #2ea3df;
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.estado-inicial h2 {
+  margin: 0 0 8px;
+  color: #16567d;
+}
+
+.estado-inicial p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tarjeta-clima {
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.tarjeta-clima h2 {
+  margin: 0;
+  color: #14577f;
+  font-size: 1.6rem;
+}
+
+.altitud {
+  margin: 8px 0 20px;
+  color: #6a8798;
+  font-size: 0.9rem;
+}
+
+.temperatura {
+  margin: 0 0 26px;
+  color: #0f88cf;
+  font-size: clamp(3.2rem, 10vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.detalles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.detalle-item {
+  background: #eef8fe;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+}
+
+.etiqueta-dato {
+  display: block;
+  color: #648297;
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.valor {
+  color: #1b4f6e;
+  font-size: 1.15rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  color: #e8f6ff;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 26px;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 24px 13px;
+  }
+
+  .buscador {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .panel,
+  .tarjeta-clima {
+    padding: 20px;
+  }
+
+  .detalles {
+    grid-template-columns: 1fr;
+  }
+}

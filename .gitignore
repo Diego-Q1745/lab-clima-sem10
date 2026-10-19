@@ -1,0 +1,9 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración del editor
+.vscode/
+
+# Agregar aquí archivos con API Keys si se usan en futuros proyectos
+# config.js

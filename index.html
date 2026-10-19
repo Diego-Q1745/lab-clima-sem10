@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima del Perú</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <header class="encabezado">
+      <p class="etiqueta">CONSULTA METEOROLÓGICA</p>
+      <h1>Clima del Perú</h1>
+      <p>Consulta la temperatura, humedad y velocidad del viento en distintas ciudades del Perú.</p>
+    </header>
+
+    <main>
+      <section class="panel buscador" aria-label="Consulta del clima">
+        <div class="campo">
+          <label for="selectorCiudad">Selecciona una ciudad</label>
+          <select id="selectorCiudad" name="ciudad">
+            <option value="">Elige una ciudad...</option>
+            <option value="lima">Lima</option>
+            <option value="cusco">Cusco</option>
+            <option value="arequipa">Arequipa</option>
+            <option value="trujillo">Trujillo</option>
+            <option value="piura">Piura</option>
+            <option value="iquitos">Iquitos</option>
+            <option value="puno">Puno</option>
+            <option value="huancayo">Huancayo</option>
+          </select>
+        </div>
+        <button id="btnConsultar" type="button">Ver clima</button>
+      </section>
+
+      <p id="mensajeError" class="error" role="alert" aria-live="polite"></p>
+      <section id="resultado" class="resultado" aria-live="polite">
+        <div class="estado-inicial">
+          <span class="icono" aria-hidden="true">☁</span>
+          <h2>Consulta el clima</h2>
+          <p>Selecciona una ciudad y presiona “Ver clima” para mostrar los datos actuales.</p>
+        </div>
+      </section>
+    </main>
+    <footer>Datos meteorológicos proporcionados por Open-Meteo · Hora local del Perú</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
